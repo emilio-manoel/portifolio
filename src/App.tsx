@@ -1,6 +1,6 @@
 
 
-function App() {
+export default function App() {
 
   return(
     <main>
@@ -9,4 +9,4 @@ function App() {
   )
 }
 
-export default App
+

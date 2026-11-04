@@ -1,0 +1,14 @@
+@layer base {
+  :root,
+  [data-theme='light'] {
+    
+  }
+
+  [data-theme='dark'] {
+    
+  }
+}
+
+@theme {
+ 
+}

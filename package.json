@@ -1,0 +1,8 @@
+{
+  "name": "portifolio",
+  "version": "0.0.1",
+  "description": "Meu portifolio",
+  "main": "main.tsx",
+  "author": "Emilio Manoel Lima Pereira",
+  "license": "MIT"
+}

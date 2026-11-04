@@ -22,5 +22,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/RootLayout.tsx"]
+  "include": ["src", "src/router.tsx"]
 }

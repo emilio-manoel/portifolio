@@ -5,7 +5,7 @@
 @import '@fontsource/inter/700.css';
 @import '@fontsource/inter/800.css';
 @import './styles/theme.css';
-@import "leaflet/dist/leaflet.css";
+
 
 @layer base {
   html,

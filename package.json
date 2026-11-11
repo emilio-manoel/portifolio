@@ -1,5 +1,6 @@
 {
   "name": "portifolio",
+  "homepage": "https://emilio-manoel.github.io/portifolio/",
   "version": "0.0.1",
   "description": "Meu portifolio",
   "main": "main.tsx",

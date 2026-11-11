@@ -2,11 +2,14 @@ import type { ButtonHTMLAttributes } from "react";
 import type { LucideIcon } from "lucide-react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "secondaryStrong" | "ghost";
+  variant?: "primary" | "secondary" 
   size?: "sm" | "md" | "lg";
   icon?: LucideIcon;
 }
 
+const standardClass =  {
+  standard: "flex content-center items-center gap-2.5 w-full bg-transparent rounded-[3.125rem] border-none py-3.5 px-6 transition ease-in-out duration-300 cursor-pointer text-primary"
+};
 
 const sizeClass = {
   sm: "text-xs gap-1 px-3 py-1.5",
@@ -17,8 +20,6 @@ const sizeClass = {
 const variantClass: Record<NonNullable<ButtonProps["variant"]>, string> = {
   primary: "",
   secondary: "",
-  secondaryStrong: "",
-  ghost: "",
 };
 
 export function Button({
@@ -32,7 +33,7 @@ export function Button({
   return (
     <button
       {...props}
-      className={["", sizeClass[size], variantClass[variant], className]
+      className={["", standardClass.standard , sizeClass[size], variantClass[variant], className]
         .filter(Boolean)
         .join(" ")}
     >

@@ -1,9 +1,10 @@
+
+
 export default function Header() {
   return (
     <header className="flex flex-row flex-wrap justify-between items-center w-full py-2 px-4 z-2">
       <nav className="">
         <ul className="flex items-center bg-primary-bg gap-4">
-          
         </ul>
       </nav>
       <div className="w-13 h-13">

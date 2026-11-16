@@ -1,8 +1,9 @@
 
 
-export default function Header() {
+export default function Header({ className }: React.ComponentProps<'header'>) {
   return (
-    <header className="flex flex-row flex-wrap justify-between items-center w-full py-2 px-4 z-2">
+    <header className={["flex flex-row flex-wrap justify-between items-center w-full py-2 px-4 z-2 ", className].filter(Boolean).join(" ")
+    }>
       <nav className="">
         <ul className="flex items-center bg-primary-bg gap-4">
         </ul>

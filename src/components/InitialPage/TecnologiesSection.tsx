@@ -1,39 +1,34 @@
-import { CodeXml, Palette, FileCode2, GitBranch } from "lucide-react";
+import { SiReact, SiTypescript, SiMongodb, SiNodedotjs } from "react-icons/si";
+import type { IconType } from "react-icons";
 
 interface Technology {
   name: string;
-  icon: typeof CodeXml;
+  icon: IconType;
   image?: string;
 }
 
 export default function TecnologiesSection() {
-  // As tecnologias usam ícones Lucide como padrão e aceitam imagem opcionalmente.
-  // Você pode passar a imagem em image: "/sua-imagem.svg" quando quiser!
   const technologies: Technology[] = [
     {
-      name: "HTML5",
-      icon: CodeXml,
-      image: "",
+      name: "React",
+      icon: SiReact,
     },
     {
-      name: "CSS3",
-      icon: Palette,
-      image: "",
+      name: "TypeScript",
+      icon: SiTypescript,
     },
     {
-      name: "JavaScript",
-      icon: FileCode2,
-      image: "",
+      name: "MongoDB",
+      icon: SiMongodb,
     },
     {
-      name: "Git",
-      icon: GitBranch,
-      image: "",
+      name: "Node.js",
+      icon: SiNodedotjs,
     },
   ];
 
   return (
-    <section className="flex flex-col justify-start items-center gap-5 pt-[6.25rem] px-4 pb-8 bg-secondary-bg -mt-[5.5rem] md:pt-[6.25rem] md:px-24 md:pb-8 md:-mt-24 xl:flex-row xl:justify-between xl:items-center xl:pt-40 xl:px-24 2xl:px-60 xl:pb-16 w-full">
+    <section className="flex flex-col justify-start items-center gap-5 pt-25 px-4 pb-8 bg-secondary-bg -mt-22 md:pt-25 md:px-24 md:pb-8 md:-mt-24 xl:flex-row xl:justify-between xl:items-center xl:pt-40 xl:px-24 2xl:px-60 xl:pb-16 w-full">
       <h2 className="text-[2rem] font-extralight normal-case font-spartan text-title text-left tracking-normal xl:text-[3rem] xl:w-[55%]">
         Conhecimento nestas tecnologias ate o momento
       </h2>

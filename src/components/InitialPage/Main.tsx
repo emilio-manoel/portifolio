@@ -9,13 +9,20 @@ export default function Main() {
       className="px-4 py-10 md:pt-36 md:pb-16 md:px-24 xl:pt-48 xl:pb-8 2xl:px-60 flex flex-col gap-8 w-full"
     >
       <div className="flex flex-col gap-6 md:items-start">
-        <h1 className="text-[2.5rem] md:text-[5rem] 2xl:text-[6.25rem] font-extralight uppercase font-spartan text-title leading-[1.1] tracking-tight">
-          <b className="font-normal">sempre buscando aprender mais &amp;</b> evoluir
+        <h1 className="text-[2.5rem] md:text-[3.5rem] 2xl:text-[4rem] font-extralight uppercase font-spartan text-title leading-[1.1] tracking-tight">
+          <b className="font-normal">
+            sempre buscando aprender mais &amp; evoluir
+          </b>{" "}
+          - meu nome é Emilio e sou Deselvolvedor fullstack
         </h1>
 
         <p className="text-base md:text-lg text-text text-justify max-w-3xl leading-relaxed">
-          Emilio manoel, Desenvolvedor Front-end, ultimo projeto do curso de 78 horas
-          Ri Happy - Front-end do Zero da Dio.me.
+          Sou estudante de Análise e Desenvolvimento de Sistemas e entusiasta da
+          tecnologia, sempre buscando transformar conhecimentos em projetos
+          práticos e desenvolver soluções cada vez mais completas. Atualmente,
+          meu foco está no desenvolvimento Full-Stack, explorando tanto a
+          construção de interfaces quanto a lógica de negócio e a integração
+          entre aplicações.
         </p>
 
         <ul className="flex items-center gap-4">

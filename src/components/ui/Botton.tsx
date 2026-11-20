@@ -1,44 +1,68 @@
-import type { ButtonHTMLAttributes } from "react";
-import type { LucideIcon } from "lucide-react";
+import {
+  isValidElement,
+  type ButtonHTMLAttributes,
+  type ReactNode,
+  type ComponentType,
+} from "react";
+import type { LucideProps } from "lucide-react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" 
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary" | "ghost" | "outline";
   size?: "sm" | "md" | "lg";
-  icon?: LucideIcon;
+  icon?: ComponentType<LucideProps> | ReactNode;
+  iconRight?: ComponentType<LucideProps> | ReactNode;
 }
 
-const standardClass =  {
-  standard: "flex content-center items-center gap-2.5 w-full bg-transparent rounded-[3.125rem] border-none py-3.5 px-6 transition ease-in-out duration-300 cursor-pointer text-primary"
-};
-
 const sizeClass = {
-  sm: "text-xs gap-1 px-3 py-1.5",
-  md: "text-sm gap-2 px-4 py-3",
-  lg: "text-base gap-2.5 px-6 py-4",
+  sm: "text-sm md:text-base gap-2 px-6 py-2.5",
+  md: "text-base md:text-lg gap-2.5 px-7 py-3",
+  lg: "text-lg md:text-xl gap-3 px-8 py-3.5",
 };
 
 const variantClass: Record<NonNullable<ButtonProps["variant"]>, string> = {
-  primary: "",
-  secondary: "",
+  primary:
+    "border border-primary text-primary hover:scale-105 active:scale-95 bg-transparent",
+  secondary:
+    "border border-transparent text-primary hover:scale-105 active:scale-95 bg-transparent",
+  outline:
+    "border border-primary-border text-primary hover:border-primary hover:scale-105 active:scale-95 bg-transparent",
+  ghost:
+    "text-text hover:text-primary hover:scale-105 active:scale-95 bg-transparent",
 };
+
+function renderIcon(iconItem?: ComponentType<LucideProps> | ReactNode) {
+  if (!iconItem) return null;
+  if (isValidElement(iconItem)) return iconItem;
+  const IconComp = iconItem as ComponentType<LucideProps>;
+  return <IconComp size={20} className="shrink-0" />;
+}
 
 export function Button({
   variant = "primary",
   size = "md",
   icon: Icon,
+  iconRight: IconRight,
   children,
-  className,
+  className = "",
   ...props
 }: ButtonProps) {
   return (
     <button
       {...props}
-      className={["", standardClass.standard , sizeClass[size], variantClass[variant], className]
+      className={[
+        "inline-flex items-center justify-center font-medium rounded-[3.125rem] cursor-pointer uppercase tracking-wider transition-all duration-300 ease-in-out disabled:opacity-50 disabled:pointer-events-none",
+        sizeClass[size],
+        variantClass[variant],
+        className,
+      ]
         .filter(Boolean)
         .join(" ")}
     >
-      {Icon && <Icon size={18} className="shrink-0" />}
+      {renderIcon(Icon)}
       {children}
+      {renderIcon(IconRight)}
     </button>
   );
 }
+
+export default Button;

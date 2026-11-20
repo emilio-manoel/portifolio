@@ -4,12 +4,12 @@ import NavMobile from "../components/shared/NavMobile";
 
 export function RootLayout() {
   return (
-    <div className="flex h-dvh w-full flex-col overflow-hidden ">
-      <Header className="hidden md:flex"/>
-      <NavMobile className="flex md:hidden"/>
-      <main className="flex flex-1 flex-col min-h-0 overflow-hidden relative">
+    <div className="min-h-screen w-full bg-primary-bg text-text flex flex-col">
+      <Header />
+      <NavMobile />
+      <div className="flex-1 w-full">
         <Outlet />
-      </main>
+      </div>
     </div>
   );
 }

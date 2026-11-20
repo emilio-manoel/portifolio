@@ -1,21 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
 @import 'tailwindcss';
 @import './styles/reset.css';
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/600.css';
-@import '@fontsource/inter/700.css';
-@import '@fontsource/inter/800.css';
 @import './styles/theme.css';
 
-
-@layer base {
-  html,
-  body,
-  #root {
-    width: 100%;
-    height: 100%;
-    height: 100dvh;
-    overflow: hidden;
-  }
-
-  
+html {
+  scroll-behavior: smooth;
 }

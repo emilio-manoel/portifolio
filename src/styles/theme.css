@@ -31,7 +31,6 @@
 
 @theme {
   --color-primary: var(--primary-color);
-
   --color-primary-bg: var(--primary-bg-color);
   --color-secondary-bg: var(--secondary-bg-color);
   --color-primary-border: var(--primary-border-color);
@@ -41,4 +40,6 @@
   --color-text: var(--text-color);
   --color-link: var(--link-color);
   --color-icon: var(--icon-color);
+
+  --font-spartan: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
 }

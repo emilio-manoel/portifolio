@@ -230,6 +230,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@octokit/openapi-types@^29.0.1":
+  version "29.0.1"
+  resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-29.0.1.tgz#05895cc8ae328058e7af75b608c4c97f0bc1bc00"
+  integrity sha512-9qWOMFNxxLokERcms42rU0PTLqQmVs7g5E41TI4mCOxmpFayD1rfC7XxOL55cG9MBZLFlC31BrR37myMKardwg==
+
 "@oxc-project/types@=0.156.0":
   version "0.156.0"
   resolved "https://registry.yarnpkg.com/@oxc-project/types/-/types-0.156.0.tgz#00e35b1ead490d81b4c7fe1dbfe35fc55e89c5e6"

@@ -15,13 +15,13 @@ export default function AboutCourses() {
   };
 
   return (
-    <div className="flex min-w-0 w-full flex-col gap-6">
-      <div className="flex flex-col gap-2">
-        <h3 className="text-[1.55rem] xl:text-[2.5rem] font-extralight uppercase font-spartan text-title text-left">
+    <div className="flex min-w-0 w-full flex-col gap-5">
+      <div className="flex flex-col gap-1.5">
+        <h3 className="text-xl sm:text-2xl font-light uppercase font-spartan text-title text-left tracking-wide">
           Cursos
         </h3>
 
-        <p className="text-sm leading-relaxed text-text">
+        <p className="text-xs sm:text-sm leading-relaxed text-text">
           Conhecimentos adquiridos por meio de cursos, bootcamps e
           experiências de aprendizado na área de tecnologia.
         </p>
@@ -38,11 +38,11 @@ export default function AboutCourses() {
                 aria-expanded={isOpen}
                 aria-controls={`course-${course.id}`}
                 onClick={() => toggleAccordion(course.id)}
-                className={`flex w-full items-center justify-between gap-4 p-4 text-left transition-colors duration-300 hover:bg-secondary-bg/60 ${
+                className={`flex w-full items-center justify-between gap-4 p-4 text-left transition-colors duration-200 hover:bg-secondary-bg/60 cursor-pointer ${
                   isOpen ? "bg-secondary-bg/70" : "bg-transparent"
                 }`}
               >
-                <div className="flex min-w-0 flex-col gap-1.5">
+                <div className="flex min-w-0 flex-col gap-1">
                   <h4 className="wrap-break-word text-sm font-semibold leading-snug text-title sm:text-base">
                     {course.title}
                   </h4>
@@ -51,7 +51,7 @@ export default function AboutCourses() {
                     {course.institution}
                   </span>
 
-                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-primary">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-primary font-medium">
                     <span>{course.duration}</span>
                     <span aria-hidden="true">•</span>
                     <span>{course.date}</span>
@@ -68,7 +68,7 @@ export default function AboutCourses() {
               {isOpen && (
                 <div
                   id={`course-${course.id}`}
-                  className="border-t border-primary-border px-4 py-4 text-sm leading-relaxed text-text sm:px-5"
+                  className="border-t border-primary-border px-4 py-3.5 text-xs sm:text-sm leading-relaxed text-text bg-secondary-bg/20"
                 >
                   <p>{course.description}</p>
                 </div>

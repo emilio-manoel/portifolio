@@ -6,11 +6,11 @@ export default function ContactSection() {
   const renderSocialIcon = (type: string) => {
     switch (type) {
       case "github":
-        return <GithubIcon size={24} className="size-6" />;
+        return <GithubIcon size={20} className="size-5" />;
       case "linkedin":
-        return <LinkedinIcon size={24} className="size-6" />;
+        return <LinkedinIcon size={20} className="size-5" />;
       case "instagram":
-        return <InstagramIcon size={24} className="size-6" />;
+        return <InstagramIcon size={20} className="size-5" />;
       default:
         return null;
     }
@@ -19,35 +19,42 @@ export default function ContactSection() {
   return (
     <section
       id="contato"
-      className="px-4 py-10 md:py-24 md:px-24 2xl:px-60 flex flex-col justify-center items-center gap-6 border-y border-primary-border w-full"
+      className="w-full border-y border-primary-border py-12 md:py-16 bg-secondary-bg/20"
     >
-      <h2 className="text-[2rem] md:text-[3rem] text-center font-extralight uppercase font-spartan text-title tracking-[0.4rem]">
-        {contactData.title}
-      </h2>
-      <p className="text-center text-text text-base md:w-4/5 leading-relaxed">
-        {contactData.description}
-      </p>
-      <ul className="flex items-center gap-4 flex-wrap justify-center">
-        {contactData.socials.map((social) => (
-          <li key={social.name}>
-            <a
-              className="flex items-center gap-2 text-text hover:text-primary transition-colors text-base"
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {renderSocialIcon(social.type)}
-              <span>{social.name}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-      <div className="pt-2">
-        <a href={`mailto:${contactData.email}`}>
-          <Button variant="primary" size="lg">
-            <span className="lowercase text-primary">{contactData.email}</span>
-          </Button>
-        </a>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center gap-5 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-light uppercase font-spartan text-title tracking-widest">
+          {contactData.title}
+        </h2>
+
+        <p className="text-sm sm:text-base text-text max-w-lg leading-relaxed">
+          {contactData.description}
+        </p>
+
+        <ul className="flex items-center gap-4 flex-wrap justify-center pt-1">
+          {contactData.socials.map((social) => (
+            <li key={social.name}>
+              <a
+                className="flex items-center gap-2 text-text hover:text-primary transition-colors text-sm font-medium"
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {renderSocialIcon(social.type)}
+                <span>{social.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="pt-2">
+          <a href={`mailto:${contactData.email}`}>
+            <Button variant="primary" size="md">
+              <span className="lowercase text-primary font-mono text-sm">
+                {contactData.email}
+              </span>
+            </Button>
+          </a>
+        </div>
       </div>
     </section>
   );

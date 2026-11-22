@@ -26,12 +26,15 @@ const SKILL_ICONS: Record<string, IconType | typeof Languages> = {
 
 export default function AboutSkills() {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-3.5 text-text">
+    <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-2.5 sm:gap-3 text-text">
       {skillsData.map((skill) => {
         const Icon = SKILL_ICONS[skill.icon];
         return (
-          <span key={skill.id} className="flex items-center gap-2">
-            {Icon && <Icon className="size-5 text-icon shrink-0" />}
+          <span
+            key={skill.id}
+            className="flex items-center gap-2 text-xs sm:text-sm font-medium"
+          >
+            {Icon && <Icon className="size-4 sm:size-4.5 text-icon shrink-0" />}
             <span>{skill.label}</span>
           </span>
         );

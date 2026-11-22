@@ -76,7 +76,7 @@ function DesktopIframePreview({ src, title }: DesktopIframePreviewProps) {
   return (
     <div
       ref={containerRef}
-      className="relative w-full lg:w-[55%] aspect-video rounded-lg overflow-hidden bg-secondary-bg border border-secondary-border shadow-md group"
+      className="relative w-full lg:w-[50%] aspect-video rounded-xl overflow-hidden bg-secondary-bg border border-secondary-border shadow-md group shrink-0"
     >
       <iframe
         src={src}
@@ -175,7 +175,7 @@ export default function ProjectsSection() {
 
   if (loading) {
     return (
-      <section className="w-full py-12 text-center text-text">
+      <section className="w-full py-12 text-center text-text text-sm">
         Carregando projetos...
       </section>
     );
@@ -183,7 +183,7 @@ export default function ProjectsSection() {
 
   if (error) {
     return (
-      <section className="w-full py-12 text-center text-red-500">
+      <section className="w-full py-12 text-center text-red-500 text-sm">
         {error}
       </section>
     );
@@ -192,17 +192,17 @@ export default function ProjectsSection() {
   return (
     <section
       id="projetos"
-      className="px-2 py-5 md:py-16 md:px-12 2xl:py-20 2xl:px-30 flex flex-col gap-8 w-full"
+      className="max-w-6xl 2xl:max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 py-10 md:py-16 flex flex-col gap-10"
     >
-      <h2 className="text-[2rem] md:text-[3rem] xl:text-[4rem] 2xl:text-[4.5rem] text-center font-extralight uppercase font-spartan text-title tracking-[0.4rem]">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl text-center font-light uppercase font-spartan text-title tracking-widest">
         Projetos
       </h2>
 
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-12 md:gap-14">
         {projects.length === 0 ? (
           <div className="flex flex-col items-center justify-center gap-3 py-12 text-center text-text">
             <Globe className="size-8 text-primary" />
-            <p className="text-base">
+            <p className="text-sm sm:text-base">
               Nenhum repositório com website e topic &quot;destaque&quot; foi encontrado.
             </p>
           </div>
@@ -210,7 +210,7 @@ export default function ProjectsSection() {
           projects.map((project) => (
             <div
               key={project.title}
-              className={`flex flex-col lg:items-center gap-8 lg:gap-12 ${
+              className={`flex flex-col lg:items-center gap-6 lg:gap-10 ${
                 project.reverse
                   ? "lg:flex-row-reverse lg:justify-between"
                   : "lg:flex-row"
@@ -222,18 +222,20 @@ export default function ProjectsSection() {
               />
 
               {/* Corpo do Card */}
-              <div className="flex flex-col justify-end items-start gap-4 flex-1">
-                <h3 className="text-[1.25rem] xl:text-[1.75rem] 2xl:text-[2rem] font-extralight uppercase font-spartan text-title text-left">
+              <div className="flex flex-col justify-center items-start gap-3.5 flex-1">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-light uppercase font-spartan text-title text-left">
                   {project.title}
                 </h3>
-                <p className="text-base text-title">{project.description}</p>
+                <p className="text-sm sm:text-base text-text leading-relaxed">
+                  {project.description}
+                </p>
 
                 {/* Badges de Tecnologias */}
                 <div className="flex flex-wrap gap-2 pt-1">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-secondary-border bg-secondary-bg px-4 py-1 text-xs font-medium text-text"
+                      className="rounded-full border border-secondary-border bg-secondary-bg px-3 py-1 text-xs font-medium text-text"
                     >
                       {tech}
                     </span>
@@ -241,7 +243,7 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Botões do Card */}
-                <div className="flex flex-row flex-wrap justify-center lg:justify-start gap-4 w-full pt-2">
+                <div className="flex flex-row flex-wrap justify-start gap-3 w-full pt-2">
                   <a
                     href={project.previewUrl}
                     target="_blank"
@@ -277,13 +279,13 @@ export default function ProjectsSection() {
           ))
         )}
 
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center pt-2">
           <a
             href="https://github.com/emilio-manoel"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="primary" size="lg" iconRight={ArrowUpRight}>
+            <Button variant="primary" size="md" iconRight={ArrowUpRight}>
               Ver Todos os Projetos
             </Button>
           </a>

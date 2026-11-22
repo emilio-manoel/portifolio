@@ -8,20 +8,25 @@ interface AboutBioProps {
 
 export default function AboutBio({ photoUrl }: AboutBioProps) {
   return (
-    <div className="flex flex-col items-start gap-8 lg:grid lg:grid-cols-[minmax(0,34%)_minmax(0,60%)] lg:justify-between lg:items-start lg:gap-12 w-full">
-      <div className="w-full max-w-13 aspect-square rounded-full border border-primary-border overflow-hidden bg-secondary-bg/60 flex items-center justify-center shadow-lg mx-auto lg:mx-0">
-        <img
-          className="w-full h-full object-cover object-center pointer-events-none"
-          src={photoUrl}
-          alt="Minha foto"
-        />
+    <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-12 gap-8 lg:gap-10 w-full">
+      {/* Coluna Avatar */}
+      <div className="lg:col-span-4 flex justify-center lg:justify-start items-start w-full">
+        <div className="w-36 h-36 sm:w-44 sm:h-44 lg:w-52 lg:h-52 rounded-2xl md:rounded-full border-2 border-primary-border overflow-hidden bg-secondary-bg/60 flex items-center justify-center shadow-lg mx-auto lg:mx-0 shrink-0">
+          <img
+            className="w-full h-full object-cover object-center pointer-events-none"
+            src={photoUrl}
+            alt="Minha foto"
+          />
+        </div>
       </div>
 
-      <div className="flex flex-col justify-start gap-6">
-        <h2 className="text-[2rem] md:text-[3rem] xl:text-[4rem] text-center lg:text-left font-extralight uppercase font-spartan text-title tracking-[0.4rem]">
+      {/* Coluna Conteúdo */}
+      <div className="lg:col-span-8 flex flex-col justify-start gap-5">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-center lg:text-left font-light uppercase font-spartan text-title tracking-widest">
           Sobre mim
         </h2>
-        <p className="text-base text-justify text-text leading-relaxed">
+
+        <p className="text-sm sm:text-base text-justify text-text leading-relaxed">
           Olá! Sou Emílio Manoel, desenvolvedor Full Stack e estudante de
           Análise e Desenvolvimento de Sistemas no Instituto Federal Baiano
           (IF Baiano). Minha atuação envolve o desenvolvimento de aplicações
@@ -38,7 +43,7 @@ export default function AboutBio({ photoUrl }: AboutBioProps) {
 
         <AboutSkills />
 
-        <div className="flex flex-row flex-wrap justify-center lg:justify-start pt-2">
+        <div className="flex flex-row flex-wrap justify-center lg:justify-start pt-1">
           <a
             href="https://www.linkedin.com/in/emilio-manoel/"
             target="_blank"

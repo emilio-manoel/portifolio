@@ -1,0 +1,67 @@
+[
+  {
+    "category": "Dio.me - Ri Happy",
+    "items": [
+      {
+        "title": "Certificado Ri Happy - Front-end do Zero",
+        "type": "image",
+        "file": "certificados/curso Dio.me/Ri happy/ri-happy.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Dio.me - Cursos",
+    "items": [
+      {
+        "title": "Santander 2024 - AI & React",
+        "type": "image",
+        "file": "certificados/curso Dio.me/curso santader - React/santander-ai-react.png"
+      },
+      {
+        "title": "Lupo - Primeiros Passos em IA",
+        "type": "image",
+        "file": "certificados/curso Dio.me/curso lupo/lupo-primeiros-passos-ia.png"
+      }
+    ]
+  },
+  {
+    "category": "Dev em Dobro",
+    "items": [
+      {
+        "title": "Dev em Dobro",
+        "type": "image",
+        "file": "certificados/curso dev em dobro/dev-em-dobro.png"
+      }
+    ]
+  },
+  {
+    "category": "Hashtag Treinamentos",
+    "items": [
+      {
+        "title": "Imersão Agentes de IA",
+        "type": "pdf",
+        "file": "certificados/curso hashtag/imersao-agentes-ia.pdf"
+      },
+      {
+        "title": "Intensivão JavaScript",
+        "type": "pdf",
+        "file": "certificados/curso hashtag/intensivao-javascript.pdf"
+      }
+    ]
+  },
+  {
+    "category": "Educa Jovem",
+    "items": [
+      {
+        "title": "Certificado Educa Jovem",
+        "type": "pdf",
+        "file": "certificados/educa jovem/educajovem-frente.pdf"
+      },
+      {
+        "title": "Carta de Recomendação",
+        "type": "pdf",
+        "file": "certificados/educa jovem/Emilio-Carta.pdf"
+      }
+    ]
+  }
+]

@@ -1,26 +1,50 @@
 [
   {
     "id": 0,
-    "title": "Versionamento de Código com Git e GitHub",
-    "institution": "Digital Innovation One",
-    "date": "Dezembro de 2025",
-    "duration": "2h",
-    "description": "Estudo dos fundamentos de versionamento de código utilizando Git e GitHub. Aprendizado sobre configuração do ambiente, autenticação via Token e SSH, criação e clonagem de repositórios, gerenciamento de branches, commits e sincronização de alterações com repositórios remotos."
+    "title": "Santander 2026 - AI React Front-end",
+    "institution": "Santander / DIO",
+    "date": "Agosto de 2026",
+    "duration": "42h",
+    "description": "Bootcamp voltado ao desenvolvimento Front-end com React e Inteligência Artificial."
   },
   {
     "id": 1,
-    "title": "Contribuindo em um Projeto Open Source no GitHub",
-    "institution": "Digital Innovation One",
-    "date": "Dezembro de 2025",
-    "duration": "1h",
-    "description": "Laboratório prático sobre colaboração em projetos de código aberto. Experiência com o fluxo de contribuição no GitHub, compreendendo a importância da colaboração, organização e compartilhamento de código entre desenvolvedores."
+    "title": "Lupo - Primeiros Passos com Inteligência Artificial",
+    "institution": "Lupo / DIO",
+    "date": "Junho de 2026",
+    "duration": "30h",
+    "description": "Formação introdutória dedicada ao contato com conceitos e aplicações de Inteligência Artificial."
   },
   {
     "id": 2,
+    "title": "Ri Happy - Front-end do Zero",
+    "institution": "Ri Happy / DIO",
+    "date": "Fevereiro de 2026",
+    "duration": "75h",
+    "description": "Bootcamp direcionado aos fundamentos do desenvolvimento Front-end."
+  },
+  {
+    "id": 3,
+    "title": "Imersão Agentes IA",
+    "institution": "Hashtag Treinamentos",
+    "date": "Fevereiro de 2026",
+    "duration": "8h",
+    "description": "Participação em uma imersão dedicada ao tema de agentes de Inteligência Artificial."
+  },
+  {
+    "id": 4,
     "title": "Dominando o protocolo HTTP e integrando com APIs",
     "institution": "Digital Innovation One",
     "date": "Janeiro de 2026",
     "duration": "4h",
     "description": "Estudo do funcionamento do protocolo HTTP e dos principais conceitos relacionados à comunicação entre cliente e servidor. Aplicação prática dos conhecimentos na integração e consumo de APIs REST, utilizando JavaScript e trabalhando com o projeto Pokédex."
+  },
+  {
+    "id": 5,
+    "title": "Semana do Zero ao Programador Contratado",
+    "institution": "Dev em Dobro",
+    "date": "Janeiro de 2024",
+    "duration": "10h",
+    "description": "Jornada de treinamento que incluiu a criação de um projeto utilizando HTML, CSS e JavaScript."
   }
 ]

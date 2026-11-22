@@ -3,46 +3,63 @@ import { ChevronDown } from "lucide-react";
 import coursesData from "./json/courses.json";
 
 export default function AboutCourses() {
-  const [openItems, setOpenItems] = useState<{ [key: number]: boolean }>({
-    0: true,
+  const [openItems, setOpenItems] = useState<Record<number, boolean>>({
+    [coursesData[0]?.id ?? -1]: true,
   });
 
-  const toggleAccordion = (index: number) => {
+  const toggleAccordion = (id: number) => {
     setOpenItems((prev) => ({
       ...prev,
-      [index]: !prev[index],
+      [id]: !prev[id],
     }));
   };
 
   return (
-    <div className="flex flex-col text-justify gap-8 w-full">
-      <h3 className="text-[1.55rem] xl:text-[2.5rem] font-extralight uppercase font-spartan text-title text-left">
-        Cursos
-      </h3>
+    <div className="flex min-w-0 w-full flex-col gap-6">
+      <div className="flex flex-col gap-2">
+        <h3 className="text-[1.55rem] xl:text-[2.5rem] font-extralight uppercase font-spartan text-title text-left">
+          Cursos
+        </h3>
 
-      <div className="flex flex-col w-full">
-        {coursesData.map((course, idx) => {
-          const isOpen = !!openItems[idx];
-          const isFirst = idx === 0;
-          const isLast = idx === coursesData.length - 1;
+        <p className="text-sm leading-relaxed text-text">
+          Conhecimentos adquiridos por meio de cursos, bootcamps e
+          experiências de aprendizado na área de tecnologia.
+        </p>
+      </div>
+
+      <div className="w-full overflow-hidden rounded-xl border border-primary-border divide-y divide-primary-border">
+        {coursesData.map((course) => {
+          const isOpen = !!openItems[course.id];
 
           return (
-            <div key={course.id} className="w-full">
+            <article key={course.id} className="w-full min-w-0">
               <button
                 type="button"
-                className={`w-full flex py-3.5 px-5 justify-between items-center border border-primary-border bg-transparent text-left cursor-pointer transition-all duration-300 text-title hover:bg-secondary-bg/50 ${
-                  !isFirst ? "border-t-0" : "rounded-t"
-                } ${isLast && !isOpen ? "rounded-b" : ""} ${
-                  isOpen ? "bg-secondary-bg" : ""
+                aria-expanded={isOpen}
+                aria-controls={`course-${course.id}`}
+                onClick={() => toggleAccordion(course.id)}
+                className={`flex w-full items-center justify-between gap-4 p-4 text-left transition-colors duration-300 hover:bg-secondary-bg/60 ${
+                  isOpen ? "bg-secondary-bg/70" : "bg-transparent"
                 }`}
-                onClick={() => toggleAccordion(idx)}
               >
-                <span className="text-title font-medium text-base">
-                  {course.title}
-                </span>
+                <div className="flex min-w-0 flex-col gap-1.5">
+                  <h4 className="wrap-break-word text-sm font-semibold leading-snug text-title sm:text-base">
+                    {course.title}
+                  </h4>
+
+                  <span className="text-xs text-text sm:text-sm">
+                    {course.institution}
+                  </span>
+
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-primary">
+                    <span>{course.duration}</span>
+                    <span aria-hidden="true">•</span>
+                    <span>{course.date}</span>
+                  </div>
+                </div>
 
                 <ChevronDown
-                  className={`size-4 text-icon transition-transform duration-300 ${
+                  className={`size-4 shrink-0 text-icon transition-transform duration-300 ${
                     isOpen ? "rotate-180" : "rotate-0"
                   }`}
                 />
@@ -50,18 +67,13 @@ export default function AboutCourses() {
 
               {isOpen && (
                 <div
-                  className={`p-6 flex flex-col items-start gap-2.5 border border-primary-border border-t-0 text-text leading-relaxed text-base bg-transparent ${
-                    isLast ? "rounded-b" : ""
-                  }`}
+                  id={`course-${course.id}`}
+                  className="border-t border-primary-border px-4 py-4 text-sm leading-relaxed text-text sm:px-5"
                 >
-                  <p>
-                    {course.institution}. {course.date}. {course.duration}.
-                  </p>
-
                   <p>{course.description}</p>
                 </div>
               )}
-            </div>
+            </article>
           );
         })}
       </div>

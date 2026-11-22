@@ -11,8 +11,7 @@ export default function ContactSection() {
         Contate-me
       </h2>
       <p className="text-center text-text text-base md:w-4/5 leading-relaxed">
-        Estou disponível para serviços e novas conexões. Contate-me via e-mail e
-        conecte-se comigo através das minhas redes sociais.
+        Estou disponível nas redes sociais abaixo ou por e-mail.
       </p>
       <ul className="flex items-center gap-4 flex-wrap justify-center">
         <li>

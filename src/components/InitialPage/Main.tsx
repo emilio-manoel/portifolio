@@ -17,7 +17,7 @@ export default function Main() {
         </h1>
 
         <p className="text-base md:text-lg text-text text-justify w-full leading-relaxed">
-          Sou estudante de Análise e Desenvolvimento de Sistemas e entusiasta da
+          Sou estudante de Análise e Desenvolvimento de Sistemas  no IF Baiano - Campus Catu, atualmente no segundo semestre e entusiasta da
           tecnologia, sempre buscando transformar conhecimentos em projetos
           práticos e desenvolver soluções cada vez mais completas. Atualmente,
           meu foco está no desenvolvimento Full-Stack, explorando tanto a

@@ -1,0 +1,23 @@
+[
+  { "id": "languages", "label": "Inglês: Básico", "icon": "Languages" },
+  { "id": "react", "label": "React: Avançado", "icon": "SiReact" },
+  {
+    "id": "javascript",
+    "label": "Javascript: Avançado",
+    "icon": "SiJavascript"
+  },
+  {
+    "id": "typescript",
+    "label": "TypeScript: Avançado",
+    "icon": "SiTypescript"
+  },
+  { "id": "nodejs", "label": "Node.js: Avançado", "icon": "SiNodedotjs" },
+  {
+    "id": "tailwindcss",
+    "label": "Tailwind CSS: Intermediario",
+    "icon": "SiTailwindcss"
+  },
+  { "id": "mongodb", "label": "MongoDB: Intermediario", "icon": "SiMongodb" },
+  { "id": "Mysql", "label": "MySql: Básico", "icon": "SiMysql" },
+  { "id": "docker", "label": "Docker: Básico", "icon": "SiDocker" }
+]

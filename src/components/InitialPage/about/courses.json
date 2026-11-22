@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "title": "Versionamento de Código com Git e GitHub",
+    "institution": "Digital Innovation One",
+    "date": "Dezembro de 2025",
+    "duration": "2h",
+    "description": "Estudo dos fundamentos de versionamento de código utilizando Git e GitHub. Aprendizado sobre configuração do ambiente, autenticação via Token e SSH, criação e clonagem de repositórios, gerenciamento de branches, commits e sincronização de alterações com repositórios remotos."
+  },
+  {
+    "id": 1,
+    "title": "Contribuindo em um Projeto Open Source no GitHub",
+    "institution": "Digital Innovation One",
+    "date": "Dezembro de 2025",
+    "duration": "1h",
+    "description": "Laboratório prático sobre colaboração em projetos de código aberto. Experiência com o fluxo de contribuição no GitHub, compreendendo a importância da colaboração, organização e compartilhamento de código entre desenvolvedores."
+  },
+  {
+    "id": 2,
+    "title": "Dominando o protocolo HTTP e integrando com APIs",
+    "institution": "Digital Innovation One",
+    "date": "Janeiro de 2026",
+    "duration": "4h",
+    "description": "Estudo do funcionamento do protocolo HTTP e dos principais conceitos relacionados à comunicação entre cliente e servidor. Aplicação prática dos conhecimentos na integração e consumo de APIs REST, utilizando JavaScript e trabalhando com o projeto Pokédex."
+  }
+]

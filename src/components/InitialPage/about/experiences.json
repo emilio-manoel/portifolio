@@ -1,0 +1,50 @@
+{
+  "education": {
+    "title": "Segundo semestre de analise e desenvolvimento de sistemas",
+    "startDate": "Inicio em fev 2026 - Dia 19",
+    "institution": "IF Baiano",
+    "campus": "Campus Catu",
+    "expectedEndDate": "Possivel termino em jul 2028"
+  },
+  "academicAndPersonal": {
+    "title": "Projetos acadêmicos e pessoais",
+    "period": "Desenvolvimento Full-Stack | 2025 – atual",
+    "projects": [
+      {
+        "name": "Sistema Inteligente de Triagem e Match para Doações de ONGs:",
+        "description": "meu Trabalho de Conclusão de Curso em ADS. Uma aplicação Full-Stack que utiliza inteligência artificial, geolocalização e integração com APIs para aproximar doadores de organizações sociais. Desenvolvida com React, TypeScript, Node.js, Express, MongoDB e Gemini API."
+      },
+      {
+        "name": "Domino Online:",
+        "description": "evolução de um projeto acadêmico para uma aplicação multiplayer em tempo real. Utiliza React, TypeScript, Node.js, Express e Socket.IO, trabalhando a comunicação entre jogadores e a sincronização das partidas."
+      },
+      {
+        "name": "API Formula 1:",
+        "description": "projeto Back-End desenvolvido com Node.js, TypeScript e Fastify, explorando a construção de APIs REST, organização de rotas e disponibilização de informações sobre equipes e pilotos."
+      }
+    ],
+    "extraNote": "Além desses projetos, desenvolvi diversas aplicações práticas durante minha formação, incluindo Pokédex, jogos em JavaScript, interfaces responsivas e projetos com React e TypeScript."
+  },
+  "extension": {
+    "title": "Projetos de extensão",
+    "institution": "Instituto Federal Baiano | 2026",
+    "initiatives": [
+      {
+        "title": "Ataques Cibernéticos no Meio Digital",
+        "workload": "Carga horária total do projeto: 100 horas",
+        "paragraphs": [
+          "Participação em projeto de extensão voltado à conscientização de jovens e adolescentes sobre segurança digital. Envolveu pesquisa bibliográfica, elaboração de materiais didáticos e participação na preparação e realização de uma palestra educativa.",
+          "Foram abordados temas como phishing, engenharia social, malware, grooming digital, sextorsão e práticas de prevenção contra golpes e ataques cibernéticos."
+        ]
+      },
+      {
+        "title": "Cultura de ADS no IF Baiano, Campus Catu",
+        "workload": "Carga horária total do projeto: 40 horas",
+        "paragraphs": [
+          "Projeto de extensão com o objetivo de apresentar o curso superior de Análise e Desenvolvimento de Sistemas a estudantes do ensino médio de uma escola pública, por meio de uma palestra interativa e atividades com quiz.",
+          "Participei da pesquisa, elaboração do material de apresentação, preparação dos slides e desenvolvimento do quiz, contribuindo para divulgar as possibilidades acadêmicas e profissionais da área de tecnologia, incluindo empreendedorismo e trabalho freelancer."
+        ]
+      }
+    ]
+  }
+}

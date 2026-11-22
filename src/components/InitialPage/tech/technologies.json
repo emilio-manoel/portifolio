@@ -1,0 +1,9 @@
+[
+  { "name": "TypeScript", "icon": "SiTypescript" },
+  { "name": "JavaScript", "icon": "SiJavascript" },
+  { "name": "Node.js", "icon": "SiNodedotjs" },
+  { "name": "MongoDB", "icon": "SiMongodb" },
+  { "name": "Docker", "icon": "SiDocker" },
+  { "name": "Tailwind CSS", "icon": "SiTailwindcss" },
+  { "name": "React", "icon": "SiReact" }
+]

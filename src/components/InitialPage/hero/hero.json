@@ -1,0 +1,23 @@
+{
+  "titleBold": "sempre buscando aprender mais & evoluir",
+  "titleRest": "+ meu nome é Emilio e sou Deselvolvedor fullstack",
+  "description": "Sou estudante de Análise e Desenvolvimento de Sistemas no IF Baiano - Campus Catu, atualmente no segundo semestre e entusiasta da tecnologia, sempre buscando transformar conhecimentos em projetos práticos e desenvolver soluções cada vez mais completas. Atualmente, meu foco está no desenvolvimento Full-Stack, explorando tanto a construção de interfaces quanto a lógica de negócio e a integração entre aplicações.",
+  "youtubeUrl": "https://www.youtube.com/embed/YaOPjaeM7TE?si=tmRJ8fm4Ko_eGI1M",
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/emilio-manoel",
+      "type": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/emilio-manoel/",
+      "type": "linkedin"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/emilio._.manoel/",
+      "type": "instagram"
+    }
+  ]
+}

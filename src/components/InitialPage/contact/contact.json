@@ -1,0 +1,22 @@
+{
+  "title": "Contate-me",
+  "description": "Estou disponível nas redes sociais abaixo ou por e-mail.",
+  "email": "emilio.trabalho555@gmail.com",
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/emilio-manoel",
+      "type": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/emilio-manoel/",
+      "type": "linkedin"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/emilio._.manoel/",
+      "type": "instagram"
+    }
+  ]
+}

@@ -1,15 +1,15 @@
-import Main from "../components/InitialPage/Main";
-import TecnologiesSection from "../components/InitialPage/TecnologiesSection";
-import ProjectsSection from "../components/InitialPage/ProjectsSection";
-import AboutSection from "../components/InitialPage/AboutSection";
-import ContactSection from "../components/InitialPage/ContactSection";
-import Footer from "../components/InitialPage/Footer";
+import HeroSection from "../components/InitialPage/hero/HeroSection";
+import TechSection from "../components/InitialPage/tech/TechSection";
+import ProjectsSection from "../components/InitialPage/projects/ProjectsSection";
+import AboutSection from "../components/InitialPage/about/AboutSection";
+import ContactSection from "../components/InitialPage/contact/ContactSection";
+import Footer from "../components/InitialPage/footer/Footer";
 
 export default function InitialPage() {
   return (
     <>
-      <Main />
-      <TecnologiesSection />
+      <HeroSection />
+      <TechSection />
       <ProjectsSection />
       <AboutSection />
       <ContactSection />

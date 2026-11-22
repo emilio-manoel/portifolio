@@ -1,43 +1,33 @@
-import { SiReact, SiTypescript, SiMongodb, SiNodedotjs, SiJavascript, SiDocker, SiTailwindcss } from "react-icons/si";
+import {
+  SiReact,
+  SiTypescript,
+  SiMongodb,
+  SiNodedotjs,
+  SiJavascript,
+  SiDocker,
+  SiTailwindcss,
+} from "react-icons/si";
 import type { IconType } from "react-icons";
+import technologiesData from "./technologies.json";
+
+const ICON_MAP: Record<string, IconType> = {
+  SiReact,
+  SiTypescript,
+  SiMongodb,
+  SiNodedotjs,
+  SiJavascript,
+  SiDocker,
+  SiTailwindcss,
+};
 
 interface Technology {
   name: string;
-  icon: IconType;
+  icon: string;
   image?: string;
 }
 
-export default function TecnologiesSection() {
-  const technologies: Technology[] = [
-    {
-      name: "TypeScript",
-      icon: SiTypescript,
-    },
-    {
-      name: "JavaScript",
-      icon: SiJavascript,
-    },
-    {
-      name: "Node.js",
-      icon: SiNodedotjs,
-    },
-    {
-      name: "MongoDB",
-      icon: SiMongodb,
-    },
-    {
-      name: "Docker",
-      icon: SiDocker,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: SiTailwindcss,
-    },
-    {
-      name: "React",
-      icon: SiReact,
-    },
-  ];
+export default function TechSection() {
+  const technologies = technologiesData as Technology[];
 
   return (
     <section className="flex flex-col justify-start items-center gap-5 pt-25 px-4 pb-8 bg-secondary-bg -mt-22 md:pt-16 md:px-12 md:pb-4 md:-mt-24 xl:flex-row xl:justify-between xl:items-center xl:pt-30 xl:px-12 2xl:px-20 xl:pb-8 w-full">
@@ -46,7 +36,7 @@ export default function TecnologiesSection() {
       </h2>
       <ul className="flex flex-row flex-wrap gap-2 xl:gap-4 justify-center max-w-[20.7rem] xl:max-w-108">
         {technologies.map((tech) => {
-          const Icon = tech.icon;
+          const Icon = ICON_MAP[tech.icon];
           return (
             <li
               key={tech.name}
@@ -58,9 +48,9 @@ export default function TecnologiesSection() {
                   src={tech.image}
                   alt={`Logo ${tech.name}`}
                 />
-              ) : (
+              ) : Icon ? (
                 <Icon className="size-8 xl:size-10 text-primary transition-transform group-hover:scale-110" />
-              )}
+              ) : null}
             </li>
           );
         })}

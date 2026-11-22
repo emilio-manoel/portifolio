@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Globe } from "lucide-react";
 import type { components } from "@octokit/openapi-types";
-import Button from "../ui/Botton";
+import Button from "../../ui/Botton";
 
 type GitHubRepo = components["schemas"]["minimal-repository"];
 
